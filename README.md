@@ -1,14 +1,14 @@
-##Welcome to DiffBreak
-#####The first comprehensive toolkit for reliably evaluating diffusion-based adversarial purification (DBP)
+## Welcome to DiffBreak
+##### The first comprehensive toolkit for reliably evaluating diffusion-based adversarial purification (DBP)
 
 Official PyTorch implementation of our paper:
 [Unlocking The Potential of Adaptive Attacks on Diffusion-Based Purification](https://arxiv.org/abs/2411.16598).
 Andre Kassis, Urs Hengartner, Yaoliang Yu
 
-###Description
+### Description
 DiffBreak provides a reliable toolbox for assessing the robustness of DBP-based defenses against adversarial examples. It offers a modular extension that efficiently back-propagates the exact gradients through any DBP-based defense. All previous attempts to evaluate DBP suffered from implementation issues that led to a false sense of security. Hence, we aim for DiffBreak to become the new standard for such evaluations to ensure the credibility of future findings. DiffBreak also allows users to experiment with a variety of gradient approximation techniques previously explored in the literature that may be suitable for threat models wherein exact gradient calculation is infesible (e.g., due to time limitations). Furthermore, no existing adversarial robustness libraries offer attacks specifically optimized for performance against this memory and time-exhaustive defense. The implementations of current attacks (e.g., AutoAttack) do not allow for batch evaluations of multiple EOT samples at once, leading to severe performance degradation and significantly limiting the number of feasible EOT iterations. Worse yet, integrating DBP with the classifier and incorporating it into the attack code is not trivial and is naturally error-prone in the lack of a unified framework. Thus, current evaluations have been strictly limited to AutoAttack and PGD. That said, many other adversarial strategies exist and in our paper we specifically find that perceptual attacks (e.g., our low-frequency-- LF-- attack) pose far more severe threats to DBP. DiffBreak adapts the implementations of known attacks (see below for a comprehensive list) to DBP and allows users to efficiently evaluate the defense's robustness using increased EOT batch sizes. With DiffBreak, any PyTorch or TF classifier can be protected using existing DBP schemes with any pretrained diffusion model and then evaluated against the attacks we offer. DiffBreak also allows evaluating non-defended (i.e., standard) classifiers.
 
-###Acknowledgment
+### Acknowledgment
 This repo was built on top of  [DiffPure](https://github.com/NVlabs/DiffPure). The adversarial attacks were adapted from various common libraries we cite below. If you consider our repo helpful, please consider citing it:
 
 @article{kassis2024unlocking,
@@ -18,12 +18,12 @@ This repo was built on top of  [DiffPure](https://github.com/NVlabs/DiffPure). T
   year={2024}
 }
 
-###Requirements
+### Requirements
 - A high-end NVIDIA GPU with >=32 GB memory.
 - [CUDA=12](https://docs.nvidia.com/datacenter/tesla/driver-installation-guide/index.html) driver must be installed.
 - [Anaconda](https://docs.anaconda.com/anaconda/install/) must be installed.
 
-###Installation
+### Installation
 ```console
 conda create -n DiffBreak python=3.10
 conda activate DiffBreak
@@ -34,13 +34,13 @@ pip install -e .
 
 After executing the above, a new command line tool ```diffbreak``` becomes available as well. You may use it to obtain information regarding the available configurations, datasets and pretrained systems we offer. To get started, just type ```diffbreak``` in your terminal. 
 
-###Usage
+### Usage
 Once DiffBreak has been installed, evaluating any classifier requires only a few lines of code. As mentioned above, we offer a variety of common pretrained classifiers (mostly taken from [Robustbench](https://github.com/RobustBench/robustbench) and [torchvision](https://pytorch.org/vision/stable/models.html))  for several datasets: [ImageNet](https://ieeexplore.ieee.org/document/5206848), [CIFAR-10](https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf), [CelebA-HQ](https://arxiv.org/abs/1710.10196) and [YouTube-Faces](https://ieeexplore.ieee.org/document/5995566). You do not need to manually download any datasets or pretrained classifiers. Our code will automatically retrieve and cache these resources upon their first use. For datasets, their test subsets are used. To run evaluations with these readily-available resources, one should use DiffBreak's "Registry" utility. Alternatively, you may use your own datasets or models (see below). Evaluations require four components that are utilized by DiffBreak's "Runner" engine, which executes the experiments. These components are: 1) The dataset objects from which the samples are taken, 2) the classifier to be evaluated, 3) The DBP defense (only required if evaluating a DBP-defended classifier) and 4) the attack under which the system is evaluated. 
 
-####A) Initialization
+#### A) Initialization
 Below we demonstrate how each of the four required components can be easily created.
 
-#####A1) Dataset
+##### A1) Dataset
 
 To obtain an object that yields samples from a dataset of your choice offered by our registry, you should run:
 ```python
@@ -56,10 +56,10 @@ Here, <mark>**dataset_name**</mark> can be any of (case-sensitive):
 
 **You are not limited to the datasets in our registry. Refer to the output of ```diffbreak custom dataset```.**
 
-#####A2) DBP
+##### A2) DBP
 *<span style="color:gray">Skip this step if evaluating a non-defended classifier.</span>*
 
-######A2.1) Diffusion configuration
+###### A2.1) Diffusion configuration
 You should select the DBP scheme you intend to use for purification. We offer four known schemes for which DiffBreak provides the exact gradients:
 - <mark>vpsde</mark>: The VP-SDE-Based DBP scheme (i.e., [DiffPure](https://arxiv.org/pdf/2205.07460)).
 - <mark>vpode</mark>: Similar to <mark>vpsde</mark> but performs purification by solving an ODE in the reverse pass instead of an SDE. This method was also proposed in [DiffPure](https://arxiv.org/pdf/2205.07460).
@@ -88,7 +88,7 @@ where DBP_SCHEME and GRAD_MODE are as explained above. Note that the returned di
 - <mark>**dbp_params**["timestep_respacing"]</mark>: Change this if you wish to perform DDPM acceleration.
 - <mark>**dbp\_params**["guidance\_\*"]</mark>: Whether to perform guided purification (i.e., [GDMP](https://arxiv.org/pdf/2205.14969))-- Available only for DDPM variants. By default, DiffBreak performs guided purification for DDPM as in [GDMP](https://arxiv.org/pdf/2205.14969). To disable it, set <mark>**dbp\_params**["guidance\_mode"]=None</mark>. You may also change the remaining guidance parameters. See [GDMP](https://arxiv.org/pdf/2205.14969) for details.
 
-######A2.1) Score model
+###### A2.2) Score model
 Now that you have the parameters, you should provide the score model to be used by DBP for purification. Our registry offers the following pretrained models:
 - <mark>ScoreSDEModel</mark>: The Score SDE model by [Song et al.](https://arxiv.org/pdf/2011.13456). Default for <mark>cifar10</mark> with VP-based schemes.
 - <mark>HaoDDPM</mark>: The model for CIFAR-10 by [Ho et al.](https://arxiv.org/pdf/2006.11239). Default for <mark>cifar10</mark> with DDPM schemes.
@@ -103,7 +103,7 @@ with dataset_name and DBP_SCHEME as explained above. Note that you may use a dif
 
 **Importantly, you may also provide any external pretrained score model instead (run ```diffbreak custom dm_class``` for details).**
 
-#####A3) Classifier
+##### A3) Classifier
 Our registry offers a variety of pretrained classifiers, which you can browse by executing ```diffbreak classifiers``` in your terminal. You can obtain the chosen classifier via:
 ```python
 kwargs = {} #if using celeba-hq, kwargs = {"attribute": YOUR_TARGET_ATTRIBUTE}
@@ -125,7 +125,7 @@ classifier = TFClassifier(my_tf_classifier, softamaxed)
 ```
 Here, <mark>**softmaxed**</mark> is a boolean indicating whether the last layer of the provided classifier applies a softmax activation or directly outputs the logits.
 
-#####A4) Attack
+##### A4) Attack
 DiffBreak offers a variety of attacks optimized for performance with DBP:
 - <mark>id</mark>: No attack. Use this to evaluate clean accuracy.
 - <mark>apgd</mark>: [AutoAttack (Linf)](https://arxiv.org/pdf/2003.01690).
@@ -143,7 +143,7 @@ DiffBreak offers a variety of attacks optimized for performance with DBP:
 - <mark>stadv</mark>: The [StAdv](https://arxiv.org/pdf/1801.02612) attack.
 -- Adapted from [perceptual-advex](https://github.com/cassidylaidlaw/perceptual-advex).
 
-######A4.1) Obtaining Attack Parameters
+###### A4.1) Obtaining Attack Parameters
 For each attack, the registry returns the default parameters for the corresponding dataset. We recommed <mark>LF</mark> and  <mark>ppgd</mark> against DBP-defended classifiers as we found them far more effective than the commonly-used norm-based methods (e.g., <mark>pgd</mark> and <mark>apgd</mark>). Obtaining the attack parameters from the registry is done as follows:
 ```python
 attack_params = Registry.attack_params(dataset_name, attack_name)
@@ -152,7 +152,7 @@ where <mark>**attack_name**</mark> is one of the above options. For <mark>imagen
 
 The notable exception is <mark>**attack_params**["eot_iters"]</mark> that is universarlly present in the paramteres for all attacks. Changing this number will alter the effective number of EOT samples in your attack. Specifically, the total number of EOT samples will be <mark>**attack_params**["eot_iters"]</mark> \* <mark>**dbp_params**["batch_size"]</mark>. That is, <mark>**dbp_params**["batch_size"]</mark> samples are propagated at each one of the <mark>**attack_params**["eot_iters"]</mark> and their gradients are obtained. These are then added to the collective sum from all samples accross all<mark>**attack_params**["eot_iters"]</mark>, which is finally divided by the total number of samples above to get the averaged gradient. You may change this number based on your GPU capabilities or stick with the default.
 
-######A4.2) Selecting The Loss Function
+###### A4.2) Selecting The Loss Function
 The remaining component for initializing the attack is the choice of the loss function to optimize. Most attacks use similar loss functions and we provide these common choices in our registry. Specifically, the available losses are:
 - <mark>CE</mark>: The cross-entropy loss. Default for <mark>pgd</mark>.
 - <mark>MarginLoss</mark>: [The Max-Margin loss]( https://arxiv.org/pdf/1608.04644). Default for all remaining attacks.
@@ -169,10 +169,10 @@ from DiffBreak import DLR
 loss = DLR()
 ```
 
-####B) Running Evaluations
+#### B) Running Evaluations
 With the necessary objects now available, one can instantiate a "Runner" object and execute experiments. This is done over the two steps described below.
 
-#####B1) Configuring The Runner
+##### B1) Configuring The Runner
 Each runner requires a configuration dictionary containing the attack and DBP parameters obtained above in a specific format, in addition to several other arguments speicifc to the expeirment itself. To construct this dictionary, the "Runner" class exposes a *setup* method with the below signature:
 ```python
 setup(
@@ -220,7 +220,7 @@ exp_conf = Runner.resume(out_dir)
 ```
 where <mark>**out_dir**</mark> is the output directory of the previously started experiment. 
 
-#####B2) Executing Experiments
+##### B2) Executing Experiments
 At this stage, we have all the required components to run an experiment. First, we create a "Runner" instance as follows:
 ```python
 device="cuda"
@@ -234,12 +234,12 @@ runner.execute()
 ```
 The attack will be evaluated and the results will be saved to out_dir/results.txt. The output images will be saved to out_dir/images. During the evaluation, the progress bar constantly displays the portion of successfull attack samples. 
 
-#####C) Understanding The Results
+##### C) Understanding The Results
 
-######C1) Screen Logs
+###### C1) Screen Logs
 The runner constantly logs the "total success rate" to the screen which corresponds to the portion of samples that are misclassified in the desired manner (depending on whether the attack is targeted). For the <mark>**eval_mode**="batch"</mark>, "single success rate" is also printed-- this represents the protion of samples for which at least a single purified copy is misclassified (see B1). That is, <mark>**eval_mode**="batch"</mark> effectively evauates both setups (however it is far more costly than running with <mark>**eval_mode**="single"</mark>).
 
-######C2) results.txt File
+###### C2) results.txt File
 The results.txt file is updated after the attack terminates for each sample, adding a row with the statistics corresponding to this input. Specifically, the n<sup>th</sup> row in this file contains the stats for the n<sup>th</sup> evaluated sample. These records are of the following format:
 ```console
 original label: ORIG_LABEL, [target label: TARGET], originally robust: ORIG_ROBUST, result: SUCCESS, [result-single: SUCCESS_SINGLE].
@@ -251,7 +251,7 @@ The different entries in this record can be interpreted as follows:
 - SUCCESS: Assigned 0 or 1, indicating whether the attack was successful (1) or not (0).
 - [SUCCESS_SINGLE]: This entry is only present for <mark>**eval_mode**="batch"</mark>. It indicates whether the attack is successful for this sample under the <mark>single</mark> evaluation mode as well.
 
-#####D) Complete Example
+##### D) Complete Example
 Below, we combine all above steps to demonstrate how easily an evaluation can be created and executed. For this purpose, we show how to perform an experiment with the default classifier for <mark>cifar10</mark> (setting <mark>**classifier_name**=None</mark>) using our <mark>LF</mark> attack and the <mark>vpsde</mark> DBP scheme. All parameters are left identical to the defaults obtained from the registry. Running the experiment amounts to executing the short script below (other default arguments were excluded):
 
 ```python
