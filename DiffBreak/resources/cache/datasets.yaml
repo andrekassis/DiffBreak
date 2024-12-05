@@ -1,0 +1,15 @@
+youtube:
+  name: youtube.tar.gz
+  url: https://vault.cs.uwaterloo.ca/s/43CngQyH4B8dpRY
+  size: 578445987
+  checksum: 5c9a2fb70f6a30f841c86998d56a930e
+celeba-hq:
+  name: celeba-hq.tar.gz
+  url: https://vault.cs.uwaterloo.ca/s/EYwd8Xc5obWjNXX 
+  size: 2734824408
+  checksum: d8c0751c88bf4858ce57e3165d5c32df
+imagenet:
+  name: imagenet.tar.gz
+  url: https://vault.cs.uwaterloo.ca/s/XsJWSTZBDASx8Aq 
+  size: 6666072473
+  checksum: 062325ff25d3e076627818e5129f3f1b

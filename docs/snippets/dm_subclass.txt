@@ -1,0 +1,48 @@
+from DiffBreak import DMWrapper
+
+# A custom dm_class should be passed as a function my_custom_dm_class
+# that instantiates a myDMWrapper object that inherits from DMWrapper
+# (see below).
+
+
+
+"""
+The pretrained score model must be wrapped inside a wrapper class
+that inherits from DMWrapper. You may need to override the forward
+method for the parent class as shown below.
+"""
+class myDMWrapper(DMWrapper):
+
+    #You may need to override this method.
+    def forward(self, x, t):
+        """
+        Must return a tuple:
+            first returned element: dx - commonly known as epsilon. The pretrained dm's output.
+            senond returned element: learned variances - if the model provides learned variances, 
+                                     return them as the second element of the tuple. Otherwise, 
+                                     return None. Most models do not provide learned variances 
+                                     and should return None. For an example with learned variances, 
+                                     please refer to DiffBreak/diffusion/diffusers/guided/unet.py
+        """
+        
+        # below is the default behavior. Override if neceaasry 
+        # for you model or leave as is.
+
+        return self.model(x, t), None
+
+
+
+"""
+You should provide this function that accpts `image_size` for an argument as your custom dm_class.
+Internally, DiffBreak will invoke it with the image size on which the score model operates.
+This may be different from the original image size of the inputs in the dataset. For instance, 
+ImageNet inputs have a dimension of (3, 224, 224). Therefore, their size is 224. However, the 
+GuidedModel score model operates on inputs of size 256. Thus, it should be initialized with
+256 as an argument. You do not need to account for this resclaing in your code as it is handled 
+automatically. However, make sure your dm_class function that instantiates the model wrapper
+(i.e., my_custom_dm_class below) expects this effective image size of the score model as an 
+argument. It is possible that the initialization of your model will ignore this argument altogether.
+"""
+def my_custom_dm_class(image_size):
+    pretrained_score_model = ... # load pretrained score model potentially using image_size
+    return myDMWrapper(pretrained_score_model)

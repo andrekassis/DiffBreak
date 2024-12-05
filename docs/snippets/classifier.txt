@@ -1,0 +1,18 @@
+from DiffBreak import PyTorchClassifier # for PyTorch pretrained classifiers
+from DiffBreak import TFClassifier # for TensorFlow pretrained classifiers
+
+# `softmaxed` is a boolean indicating whether the last layer of the provided classifier
+#applies a softmax activation or directly outputs the logits.
+softmaxed = ... 
+
+
+# Tensorflow 
+my_tf_classifier = ... # load your pretrained TensorFlow classifier.
+classifier = TFClassifier(my_tf_classifier, softamaxed)
+
+
+# PyTorch
+my_torch_classifier = ... # load your pretrained PyTorch classifier.
+classifier = PyTorchClassifier(my_torch_classifier, softamaxed)
+
+# You may now use `classifier` with DiffBreak.

@@ -1,0 +1,29 @@
+from DiffBreak import Data
+
+# You should provide an object that inherits from Data. Your custom class must implement the _do_load method.
+# datasets created in this manner can be used with DiffBreak.
+
+class MyData(Data):
+    """
+    data: A tuple (x, y) where x is an array that contains the information for lodaing the data 
+          samples and y is a numpy.array that contains the labels. For instance, each entry in x can correspond
+          to the input image itself (for small datasets) or the path from which the image is to be loaded (for
+          larger images). See classes PILData and NumpyData in DiffBreak/utils/data/data.py for examples of
+          both cases. Loading different types of images should be handled in _do_load below. 
+    num_classes: number of classes in the dataset.
+    image_size: The final image size your loaded images are resized to. Note that image size is an int.
+                The inputs are all expected to be 3-channel images with final width and height that are 
+                equivalent. That is, the image dimension provided by the dataset is (3, image_size, image_size).
+    crop_sz: If the images should be cropped as part of their preprocessing before being resized 
+             into their final image size, provide this cropping size as an argument. 
+             Otherwise leave it as None.
+    """
+    def __init__(self, data, num_classes, image_size, crop_sz=None,...):
+	    super().__init__(data, num_classes, image_size, crop_sz)
+        #custom initialization code
+		
+    # specify how the different images are loaded. see PILData and NumpyData in DiffBreak/utils/data/data.py.
+    def _do_load(self, x):
+	    #load and return record
+
+
