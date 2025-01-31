@@ -1,6 +1,5 @@
 import torch
 
-from .lpips_dist import *
 from .loss_provider import LpipsVGG
 
 
