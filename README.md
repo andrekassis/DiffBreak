@@ -128,10 +128,6 @@ DiffBreak offers a variety of attacks optimized for performance with DBP:
 -- Adapted from [DiffAttack](https://github.com/kangmintong/DiffAttack).
 - <mark>LF</mark>: Our [Low-Frequency](https://arxiv.org/pdf/2411.16598) attack.
 -  <mark>diffattack_LF</mark>: Our  <mark>LF</mark> attack augmented with the per-step losses used by DiffAttack.
--  <mark>ppgd</mark>: [PerceptualPGDAttack](https://arxiv.org/abs/2006.12655).
--- Adapted from [perceptual-advex](https://github.com/cassidylaidlaw/perceptual-advex).
-- <mark>lagrange</mark>: [LagrangePerceptualAttack](https://arxiv.org/abs/2006.12655).
--- Adapted from [perceptual-advex](https://github.com/cassidylaidlaw/perceptual-advex).
 - <mark>stadv</mark>: The [StAdv](https://arxiv.org/pdf/1801.02612) attack.
 -- Adapted from [perceptual-advex](https://github.com/cassidylaidlaw/perceptual-advex).
 
