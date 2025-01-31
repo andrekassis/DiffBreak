@@ -14,10 +14,8 @@ This repo was built on top of  [DiffPure](https://github.com/NVlabs/DiffPure). T
 
 ### Installation
 First, download and extract this repo.
-Then, execute the following:
+Then, "cd" into the extracted directory and execute the following:
 ```console
-unzip DiffBreak-06FA.zip
-cd DiffBreak-06FA
 conda create -n DiffBreak python=3.10
 conda activate DiffBreak
 pip install -e .
