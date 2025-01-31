@@ -13,11 +13,13 @@ This repo was built on top of  [DiffPure](https://github.com/NVlabs/DiffPure). T
 - [Anaconda](https://docs.anaconda.com/anaconda/install/) must be installed.
 
 ### Installation
+First, download and extract this repo.
+Then, execute the following:
 ```console
+unzip DiffBreak-06FA.zip
+cd DiffBreak-06FA
 conda create -n DiffBreak python=3.10
 conda activate DiffBreak
-git clone https://github.com/andrekassis/DiffBreak.git
-cd DiffBreak
 pip install -e .
 ```
 
