@@ -23,8 +23,6 @@ all_attacks = {
     "diffattack_LF": LF,
     "pgd": PGD,
     "stadv": StAdvAttack,
-    "ppgd": PerceptualPGDAttack,
-    "lagrange": LagrangePerceptualAttack,
 }
 
 
@@ -276,7 +274,7 @@ def handle_diffattack(system):
 
 
 def is_negated_loss(attack_name, loss_fn):
-    if "pgd" in attack_name or attack_name == "lagrange":
+    if "pgd" in attack_name:
         return isinstance(loss_fn, CE)
     return not isinstance(loss_fn, CE)
 
