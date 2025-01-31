@@ -144,13 +144,11 @@ scheme_description_map = {
 
 attack_description_map = {
     "pgd": "The [bold]PGD[/bold] attack: [purple][underline]https://arxiv.org/pdf/1607.02533[/underline][/purple].",
-    "ppgd": "[bold]PerceptualPGDAttack[/bold]: [purple][underline]https://arxiv.org/abs/2006.12655[/underline][/purple].",
     "apgd": "[bold]AutoAttack[/bold] (Linf): [purple][underline]https://arxiv.org/pdf/2003.01690[/underline][/purple].",
     "diffattack_apgd": "[bold]DiffAttack[/bold]: [purple][underline]https://arxiv.org/pdf/2311.16124[/underline][/purple].",
     "LF": "Our [bold]Low-Frequency[/bold] attack: [purple][underline]https://arxiv.org/pdf/2411.16598[/underline][/purple].",
     "diffattack_LF": "Our [cyan]LF[/cyan] attack augmented with the per-step losses used by [bold]DiffAttack[/bold].",
     "stadv": "The [bold]StAdv[/bold] attack: [purple][underline]https://arxiv.org/pdf/1801.02612[/underline][/purple].",
-    "lagrange": "[bold]LagrangePerceptualAttack[/bold]: [purple][underline]https://arxiv.org/abs/2006.12655[/underline][/purple].",
     "id": "No attack. Use this to evaluate clean accuracy.",
 }
 
@@ -256,13 +254,11 @@ class Registry:
 
     all_attacks = [
         "pgd",
-        "ppgd",
         "apgd",
         "diffattack_apgd",
         "LF",
         "diffattack_LF",
         "stadv",
-        "lagrange",
         "id",
     ]
 
