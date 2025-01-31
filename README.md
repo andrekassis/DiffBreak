@@ -136,7 +136,7 @@ DiffBreak offers a variety of attacks optimized for performance with DBP:
 - <mark>stadv</mark>: The [StAdv](https://arxiv.org/pdf/1801.02612) attack.
 -- Adapted from [perceptual-advex](https://github.com/cassidylaidlaw/perceptual-advex).
 
-Please note that this repo is a work in progress. We are currently enriching it with various other attacks that will become available after the deadline as well.
+Please note that this repo is a work in progress. We are currently enriching it with various other attacks that will become available after publication as well.
 
 ###### A4.1) Obtaining Attack Parameters
 For each attack, the registry returns the default parameters for the corresponding dataset. We recommend <mark>LF</mark> and  <mark>ppgd</mark> against DBP-defended classifiers as we found them far more effective than the commonly-used norm-based methods (e.g., <mark>pgd</mark> and <mark>apgd</mark>). Obtaining the attack parameters from the registry is done as follows:
