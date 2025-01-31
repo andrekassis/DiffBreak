@@ -2,7 +2,7 @@
 ##### The first comprehensive toolkit for reliably evaluating diffusion-based adversarial purification (DBP)
 
 ### Important
-As we are required to anonymize the submission and the hardcoded links to our pretrained models and datasets point to internal servers, unfortunately, you will not be able to use the "Registry" functionality to seamlessly load models and datasets and run evaluations. Instead, you will need to follow the procedure that allows you to provide custom systems (datasets/diffusion models/classifiers). However, it is still extremely straightforward. Please refer to "Usage" below for details.
+As we are required to anonymize the submission and the hardcoded links to our pretrained models and datasets point to internal servers, unfortunately, you will not be able to use the "Registry" functionality to seamlessly load models and datasets and run evaluations. Instead, you will need to follow the procedure that allows you to provide custom systems (datasets/diffusion models/classifiers). However, it is still extremely straightforward. Please refer to "Usage" below for details. Note that you should still use the registry to obtain the default attack/dbp parameters (make sure to provide the attack/dataset names as they appear in this document for this purpose).
 
 ### Acknowledgment
 This repo was built on top of  [DiffPure](https://github.com/NVlabs/DiffPure). The adversarial attacks were adapted from various common libraries we cite below.
@@ -13,8 +13,13 @@ This repo was built on top of  [DiffPure](https://github.com/NVlabs/DiffPure). T
 - [Anaconda](https://docs.anaconda.com/anaconda/install/) must be installed.
 
 ### Installation
-First, download and extract this repo.
-Then, "cd" into the extracted directory and execute the following:
+```console
+mkdir DiffBreak
+cd DiffBreak
+```
+
+Then, download and extract this repo in the current directory and execute the following:
+
 ```console
 conda create -n DiffBreak python=3.10
 conda activate DiffBreak
