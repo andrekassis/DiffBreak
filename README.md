@@ -139,7 +139,7 @@ DiffBreak offers a variety of attacks optimized for performance with DBP:
 Please note that this repo is a work in progress. We are currently enriching it with various other attacks that will become available after publication as well.
 
 ###### A4.1) Obtaining Attack Parameters
-For each attack, the registry returns the default parameters for the corresponding dataset. We recommend <mark>LF</mark> and  <mark>ppgd</mark> against DBP-defended classifiers as we found them far more effective than the commonly-used norm-based methods (e.g., <mark>pgd</mark> and <mark>apgd</mark>). Obtaining the attack parameters from the registry is done as follows:
+For each attack, the registry returns the default parameters for the corresponding dataset. We recommend <mark>LF</mark> against DBP-defended classifiers as we found it far more effective than the commonly-used norm-based methods (e.g., <mark>pgd</mark> and <mark>apgd</mark>). Obtaining the attack parameters from the registry is done as follows:
 ```python
 attack_params = Registry.attack_params(dataset_name, attack_name)
 ```
