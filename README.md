@@ -1,6 +1,9 @@
 ## Welcome to DiffBreak
 ##### The first comprehensive toolkit for reliably evaluating diffusion-based adversarial purification (DBP)
 
+### Important
+As we are required to anonymize the submission and the hardcoded links to our pretrained models and datasets point to internal servers, unfortunately, you will not be able to use the "Registry" functionality to seamlessly load models and datasets and run evaluations. Instead, you will need to follow the procedure that allows you to provide custom systems (datasets/diffusion models/classifiers). However, it is still extremely straightforward. Please refer to "Usage" below for details.
+
 ### Acknowledgment
 This repo was built on top of  [DiffPure](https://github.com/NVlabs/DiffPure). The adversarial attacks were adapted from various common libraries we cite below.
 
