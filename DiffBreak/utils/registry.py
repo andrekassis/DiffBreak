@@ -38,18 +38,6 @@ apgd_params = {
     "n_restarts": 1,
 }
 
-lagrange_params = {
-    "bound": 0.5,
-    "num_iterations": 20,
-    "binary_steps": 5,
-}
-
-ppgd_params = {
-    "bound": 0.5,
-    "num_iterations": 100,
-    "cg_iterations": 5,
-}
-
 pgd_params = {"eps_iter": 0.008, "nb_iter": 100}
 
 
@@ -129,13 +117,11 @@ class Registry:
 
     all_attacks = [
         "pgd",
-        "ppgd",
         "apgd",
         "diffattack_apgd",
         "LF",
         "diffattack_LF",
         "stadv",
-        "lagrange",
         "id",
     ]
 
@@ -225,8 +211,6 @@ class Registry:
             exit(1)
         if attack_name in ["LF", "diffattack_LF", "diffattack_apgd", "apgd", "stadv"]:
             return MarginLoss(kappa="inf")
-        elif attack_name in ["ppgd", "lagrange"]:
-            return MarginLoss(kappa=1)
         elif attack_name == "pgd":
             return CE()
         else:
@@ -247,11 +231,6 @@ class Registry:
         params = eval(attack_name + "_params")
         params["attack_name"] = oname
         params["eot_iters"] = 1 if dataset_name == "cifar10" else 2
-
-        if attack_name in ["ppgd", "lagrange"]:
-            params["lpips_model"] = (
-                "alexnet" if dataset_name != "cifar10" else "alexnet_cifar"
-            )
 
         if attack_name in ["pgd", "apgd"]:
             if dataset_name in ["celeba-hq", "youtube"]:
