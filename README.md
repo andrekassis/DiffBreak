@@ -1,25 +1,8 @@
 ## Welcome to DiffBreak
 ##### The first comprehensive toolkit for reliably evaluating diffusion-based adversarial purification (DBP)
 
-Official PyTorch implementation of our paper:
-[Unlocking The Potential of Adaptive Attacks on Diffusion-Based Purification](https://arxiv.org/abs/2411.16598).
-
-Andre Kassis, Urs Hengartner, Yaoliang Yu
-
-Contact: akassis@uwaterloo.ca
-
-### Description
-DiffBreak provides a reliable toolbox for assessing the robustness of DBP-based defenses against adversarial examples. It offers a modular extension that efficiently back-propagates the exact gradients through any DBP-based defense. All previous attempts to evaluate DBP suffered from implementation issues that led to a false sense of security. Hence, we aim for DiffBreak to become the new standard for such evaluations to ensure the credibility of future findings. DiffBreak also allows users to experiment with a variety of gradient approximation techniques previously explored in the literature that may be suitable for threat models wherein exact gradient calculation is infeasible (e.g., due to time limitations). Furthermore, no existing adversarial robustness libraries offer attacks specifically optimized for performance against this memory and time-exhaustive defense. The implementations of current attacks (e.g., AutoAttack) do not allow for batch evaluations of multiple EOT samples at once, leading to severe performance degradation and significantly limiting the number of feasible EOT iterations. Worse yet, integrating DBP with the classifier and incorporating it into the attack code is not trivial and is naturally error-prone in the lack of a unified framework. Thus, current evaluations have been strictly limited to AutoAttack and PGD. That said, many other adversarial strategies exist, and in our paper, we specifically find that perceptual attacks (e.g., our low-frequency-- LF-- attack) pose far more severe threats to DBP. DiffBreak adapts the implementations of known attacks (see below for a comprehensive list) to DBP and allows users to efficiently evaluate the defense's robustness using increased EOT batch sizes. With DiffBreak, any PyTorch or TF classifier can be protected using existing DBP schemes with any pretrained diffusion model and then evaluated against the attacks we offer. DiffBreak also allows the evaluation of non-defended (i.e., standard) classifiers.
-
 ### Acknowledgment
-This repo was built on top of  [DiffPure](https://github.com/NVlabs/DiffPure). The adversarial attacks were adapted from various common libraries we cite below. If you consider our repo helpful, please consider citing it:
-
-@article{kassis2024unlocking,
-  title={Unlocking The Potential of Adaptive Attacks on Diffusion-Based Purification},
-  author={Kassis, Andre and Hengartner, Urs and Yu, Yaoliang},
-  journal={arXiv preprint arXiv:2411.16598},
-  year={2024}
-}
+This repo was built on top of  [DiffPure](https://github.com/NVlabs/DiffPure). The adversarial attacks were adapted from various common libraries we cite below.
 
 ### Requirements
 - A high-end NVIDIA GPU with >=32 GB memory.
