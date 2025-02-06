@@ -2,7 +2,7 @@
 ##### The first comprehensive toolkit for reliably evaluating diffusion-based adversarial purification (DBP)
 
 Official PyTorch implementation of our paper:
-[Unlocking The Potential of Adaptive Attacks on Diffusion-Based Purification](https://arxiv.org/abs/2411.16598).
+[DiffBreak: Breaking Diffusion-Based Purification with Adaptive Attacks](https://arxiv.org/abs/2411.16598).
 
 Andre Kassis, Urs Hengartner, Yaoliang Yu
 
