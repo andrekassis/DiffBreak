@@ -6,7 +6,7 @@ As we are required to anonymize the submission and the hardcoded links to our pr
 
 Additionally, the paper and this document clearly list the sources from which our models were taken and provide links to the corresponding papers. Reviewers are welcome to navigate to the GitHub repos associated with these papers, download these resources, and then use them as "custom" systems by following the documentation below to reproduce our experiments. For reproducibility, we provide a code template at the end of this document showing how to execute attacks with our library using only a few lines of code. By simply changing the options hardcoded in this example, following the instructions in the remainder of this document, it is possible to execute any attack of choice that DiffBreak offers with any provided custom classifier, dataset, and diffusion model.
 
-*Note: Code for MimicDiffusion and our internal fork of DiffHammer are not included in this submission version due to anonymization and time constraints. They will be added in the post-submission release.*
+*Note: Code for MimicDiffusion and our internal fork of DiffHammer are not included in this submission version due to anonymization and time constraints. They will be added in a post-submission release.*
 
 ### Acknowledgment
 This repo was built on top of  [DiffPure](https://github.com/NVlabs/DiffPure). The adversarial attacks were adapted from various common libraries we cite below.
