@@ -1,0 +1,13 @@
+from DiffBreak.utils import SuperResolutionWrapper
+
+# Wrap your classifier with the super resolution defense
+# `classifier` is an instantiated PyTorch or TF classifier
+# `loss_fn` is a DiffBreak loss such as CE or MarginLoss
+
+defender = SuperResolutionWrapper(
+    classifier,
+    loss_fn,
+    cache_dir="cache",
+    num_inference_steps=100,
+    eta=1.0,
+)

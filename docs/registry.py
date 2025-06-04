@@ -165,7 +165,7 @@ command_desc_map = {
     "attacks": "Lists all attacks offered by DiffBreak.",
     "losses": "Lists all loss functions you can use in your attacks.",
     "grad_modes": "Lists all gradient modes available in DiffBreak.",
-    "custom classifier|dm_class|dataset": "Provides an explanation regarding the use of a custom classifier, dm_class or dataset.",
+    "custom classifier|dm_class|dataset|defense": "Provides an explanation regarding the use of a custom classifier, dm_class, dataset or defense.",
 }
 
 loss_function_map = {
@@ -571,10 +571,18 @@ def make_custom_classifier_card():
     return make_code_card(message, resource_path)
 
 
+def make_custom_defense_card():
+    resource_file = "defense_subclass.txt"
+    message = "[bold green]Providing a custom defense\n"
+    with resources.path(resource_module, resource_file) as fspath:
+        resource_path = fspath.as_posix()
+    return make_code_card(message, resource_path)
+
+
 def make_custom_cards(ctype):
-    if ctype not in ["dataset", "dm_class", "classifier"]:
+    if ctype not in ["dataset", "dm_class", "classifier", "defense"]:
         logging.error(
-            "Custom implementations are only available for dataset|classifier|dm_class."
+            "Custom implementations are only available for dataset|classifier|dm_class|defense."
         )
         exit(1)
 
@@ -582,6 +590,8 @@ def make_custom_cards(ctype):
         return make_data_subclass_card()
     if ctype == "dm_class":
         return make_dm_subclass_card()
+    if ctype == "defense":
+        return make_custom_defense_card()
     return make_custom_classifier_card()
 
 
