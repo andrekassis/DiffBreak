@@ -2,7 +2,7 @@
 ##### The first comprehensive toolkit for reliably evaluating diffusion-based adversarial purification (DBP)
 
 Official PyTorch implementation of our NeurIPS 2025 paper:
-[DiffBreak: Breaking Diffusion-Based Purification with Adaptive Attacks](https://arxiv.org/abs/2411.16598).
+[DiffBreak: Is Diffusion-Based Purification Robust?](https://arxiv.org/abs/2411.16598).
 
 Andre Kassis, Urs Hengartner, Yaoliang Yu
 
