@@ -1,7 +1,7 @@
 ## Welcome to DiffBreak
 ##### The first comprehensive toolkit for reliably evaluating diffusion-based adversarial purification (DBP)
 
-Official PyTorch implementation of our paper:
+Official PyTorch implementation of our NeurIPS 2025 paper:
 [DiffBreak: Breaking Diffusion-Based Purification with Adaptive Attacks](https://arxiv.org/abs/2411.16598).
 
 Andre Kassis, Urs Hengartner, Yaoliang Yu
@@ -14,11 +14,12 @@ DiffBreak provides a reliable toolbox for assessing the robustness of DBP-based 
 ### Acknowledgment
 This repo was built on top of  [DiffPure](https://github.com/NVlabs/DiffPure). The adversarial attacks were adapted from various common libraries we cite below. If you consider our repo helpful, please consider citing it:
 
-@article{kassis2024unlocking,
-  title={Unlocking The Potential of Adaptive Attacks on Diffusion-Based Purification},
-  author={Kassis, Andre and Hengartner, Urs and Yu, Yaoliang},
-  journal={arXiv preprint arXiv:2411.16598},
-  year={2024}
+@inproceedings{
+2025diffbreak,
+title={DiffBreak: Is Diffusion-Based Purification Robust?},
+author={Kassis, Andre and Hengartner, Urs and Yu, Yaoliang},
+booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+year={2025},
 }
 
 ### Requirements
