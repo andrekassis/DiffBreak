@@ -1,259 +1,259 @@
 cifar10:
   name: cifar10.obj
-  url: https://vault.cs.uwaterloo.ca/s/2wkDsJE6YfSGyTc 
+  url: https://nextcloud.cs.uwaterloo.ca/s/b729ZffCEktC4jq
   size: 30730205
   checksum: !!binary |
     FT4E8EFbseYSj4RPs0GEvw==
 imagenet:
   name: imagenet.obj
-  url: https://vault.cs.uwaterloo.ca/s/n8deLwrR8MgBm4Z
+  url: https://nextcloud.cs.uwaterloo.ca/s/mWBm69wx4LwYXLT
   size: 12600234
   checksum: !!binary |
     fnZeDSz194QDHYKlAPXEMg==
 youtube:
   name: youtube.obj
-  url: https://vault.cs.uwaterloo.ca/s/e7fqrysPdL9cJZk
+  url: https://nextcloud.cs.uwaterloo.ca/s/LQXb42snbHynZ7r
   size: 20015035
   checksum: !!binary |
     k0wCk0CVlxowXXxgBH2Tig==
 celebahq:
   celebahq__Rosy_Cheeks:
     name: celebahq__Rosy_Cheeks.obj
-    url: https://vault.cs.uwaterloo.ca/s/tTi6onjMidTBJ8e 
+    url: https://nextcloud.cs.uwaterloo.ca/s/qKxLAjbrRWPH394
     size: 1200353
     checksum: !!binary |
       KN+qOdU2f3FmuXAlV7XMIw==
   celebahq__Attractive:
     name: celebahq__Attractive.obj
-    url: https://vault.cs.uwaterloo.ca/s/jk3ofLPadEBcPSC
+    url: https://nextcloud.cs.uwaterloo.ca/s/Bb4PkCNdaCNqBJy
     size: 1200353
     checksum: !!binary |
       44XXyzS11qJF23jXgnkI9g==
   celebahq__Wearing_Earrings:
     name: celebahq__Wearing_Earrings.obj
-    url: https://vault.cs.uwaterloo.ca/s/ffEa4HT4eDkM2eb 
+    url: https://nextcloud.cs.uwaterloo.ca/s/T3r2Ga79Le45FRP
     size: 1200353
     checksum: !!binary |
       vAAxwkcf45Uj95xpPHAEMQ==
   celebahq__Mouth_Slightly_Open:
     name: celebahq__Mouth_Slightly_Open.obj
-    url: https://vault.cs.uwaterloo.ca/s/CzB8BNj3oMAwgiT 
+    url: https://nextcloud.cs.uwaterloo.ca/s/QpwrKEb4RJYi9rq
     size: 1200353
     checksum: !!binary |
       8AHVvYPDddJTkU7sYzxUcQ==
   celebahq__Goatee:
     name: celebahq__Goatee.obj
-    url: https://vault.cs.uwaterloo.ca/s/G65z8WGAinCiysy 
+    url: https://nextcloud.cs.uwaterloo.ca/s/3LeMeLG5g49MfLf
     size: 1200353
     checksum: !!binary |
       ZuEzUktJFDFxZ3fYEX1TDw==
   celebahq__Receding_Hairline:
     name: celebahq__Receding_Hairline.obj
-    url: https://vault.cs.uwaterloo.ca/s/qj2oi2BiJa6bDdk 
+    url: https://nextcloud.cs.uwaterloo.ca/s/a6MJnwBmb5JsBAf
     size: 1200353
     checksum: !!binary |
       dLEFbrUALl92zxBOyINCSQ==
   celebahq__Pointy_Nose:
     name: celebahq__Pointy_Nose.obj
-    url: https://vault.cs.uwaterloo.ca/s/prJpiYNfF8mofBr 
+    url: https://nextcloud.cs.uwaterloo.ca/s/5p7zd7pj8BwTos9
     size: 1200353
     checksum: !!binary |
       2G9JNJb6VONJV45gs5RhQw==
   celebahq__Eyeglasses:
     name: celebahq__Eyeglasses.obj
-    url: https://vault.cs.uwaterloo.ca/s/AdMxcqFtmADrZRe 
+    url: https://nextcloud.cs.uwaterloo.ca/s/sLtPmArP7edKYy7
     size: 1200353
     checksum: !!binary |
       vtmfx7tBVOnXN2PpdtZDyA==
   celebahq__High_Cheekbones:
     name: celebahq__High_Cheekbones.obj
-    url: https://vault.cs.uwaterloo.ca/s/z78XCjZScfaXewK
+    url: https://nextcloud.cs.uwaterloo.ca/s/PZNfgHYaJKMiXoT
     size: 1200353
     checksum: !!binary |
       meLPpBJ4SG6jcuSdi9hidg==
   celebahq__Big_Lips:
     name: celebahq__Big_Lips.obj
-    url: https://vault.cs.uwaterloo.ca/s/Yy3E6o3SPrW2SoS
+    url: https://nextcloud.cs.uwaterloo.ca/s/Bb5geri3D6bL3Da
     size: 1200353
     checksum: !!binary |
       YJAzOjoKz0bMEY39xO/mBQ==
   celebahq__Sideburns:
     name: celebahq__Sideburns.obj
-    url: https://vault.cs.uwaterloo.ca/s/9gtptK5CGEA4kcw
+    url: https://nextcloud.cs.uwaterloo.ca/s/GtbAFtBxxxEQkp9
     size: 1200353
     checksum: !!binary |
       DCpz2dnHlwml4tfD+2TwCg==
   celebahq__Wearing_Necklace:
     name: celebahq__Wearing_Necklace.obj
-    url: https://vault.cs.uwaterloo.ca/s/5kfJtqocyKAGSet
+    url: https://nextcloud.cs.uwaterloo.ca/s/Ptkw9EZ2mSzEKY2
     size: 1200353
     checksum: !!binary |
       aVp9mNQEPTkYdt776mDY6w==
   celebahq__Bangs:
     name: celebahq__Bangs.obj
-    url: https://vault.cs.uwaterloo.ca/s/EtgrZkzqBNwjM3X
+    url: https://nextcloud.cs.uwaterloo.ca/s/RrT3LbprgfmXyR9
     size: 1200353
     checksum: !!binary |
       vr/r7hC6pmigee/QqUWc4w==
   celebahq__Chubby:
     name: celebahq__Chubby.obj
-    url: https://vault.cs.uwaterloo.ca/s/QGtRBpWfqEFBia5
+    url: https://nextcloud.cs.uwaterloo.ca/s/YbLWqWSqSGd6L2A
     size: 1200353
     checksum: !!binary |
       aX3b6gx2v1DsIVdfOLFxDg==
   celebahq__Bushy_Eyebrows:
     name: celebahq__Bushy_Eyebrows.obj
-    url: https://vault.cs.uwaterloo.ca/s/AA9nHSS5ddCe39T
+    url: https://nextcloud.cs.uwaterloo.ca/s/N3isasK4AZBcLpR
     size: 1200353
     checksum: !!binary |
       +VK7tJbDH13O4qcAKjMQjg==
   celebahq__Pale_Skin:
     name: celebahq__Pale_Skin.obj
-    url: https://vault.cs.uwaterloo.ca/s/AiMbSYJa2eqqdnF
+    url: https://nextcloud.cs.uwaterloo.ca/s/TEg4nFXratSMMd3
     size: 1200353
     checksum: !!binary |
       xYAOGSCi2pp6fDe6Oc/l8A==
   celebahq__Young:
     name: celebahq__Young.obj
-    url: https://vault.cs.uwaterloo.ca/s/xFQk86q6qr5Ay99
+    url: https://nextcloud.cs.uwaterloo.ca/s/i6obRkB5MECRqXB
     size: 1200353
     checksum: !!binary |
       OEOeRjw+03O09ozVpquBSg==
   celebahq__Wearing_Lipstick:
     name: celebahq__Wearing_Lipstick.obj
-    url: https://vault.cs.uwaterloo.ca/s/SXTjtWp36H2Rxd5
+    url: https://nextcloud.cs.uwaterloo.ca/s/fNRacXQTJWWMsHS
     size: 1200353
     checksum: !!binary |
       Xbx4JNUluLFKyo4iZAf+yw==
   celebahq__Straight_Hair:
     name: celebahq__Straight_Hair.obj
-    url: https://vault.cs.uwaterloo.ca/s/zs9nmeBaL9sJJL9
+    url: https://nextcloud.cs.uwaterloo.ca/s/Q6DPTDSA6G5kwi6
     size: 1200353
     checksum: !!binary |
       qDIGSzPN40a4ssdwe+PugA==
   celebahq__Narrow_Eyes:
     name: celebahq__Narrow_Eyes.obj
-    url: https://vault.cs.uwaterloo.ca/s/iHZgZ6Ajg6BSMA5
+    url: https://nextcloud.cs.uwaterloo.ca/s/ESjrXb8jxkB9PWN
     size: 1200353
     checksum: !!binary |
       jViayuZYExETQ4fXzdqa8A==
   celebahq__Big_Nose:
     name: celebahq__Big_Nose.obj
-    url: https://vault.cs.uwaterloo.ca/s/HMdMFg4FTEipxFg
+    url: https://nextcloud.cs.uwaterloo.ca/s/w584xodQxgAixYc
     size: 1200353
     checksum: !!binary |
       cptUCo03DlElSQpuWW7erw==
   celebahq__Wavy_Hair:
     name: celebahq__Wavy_Hair.obj
-    url: https://vault.cs.uwaterloo.ca/s/D5yA9jfge5sDpJQ
+    url: https://nextcloud.cs.uwaterloo.ca/s/g4cHTnLKKCCeMK8
     size: 1200353
     checksum: !!binary |
       IsrkLBXmtWrx1a+ihtQPWA==
   celebahq__Wearing_Hat:
     name: celebahq__Wearing_Hat.obj
-    url: https://vault.cs.uwaterloo.ca/s/JR7B4tf48eA2xjC
+    url: https://nextcloud.cs.uwaterloo.ca/s/3wYs2563qEo9dMy
     size: 1200353
     checksum: !!binary |
       qB1j9gbbR3ymGd6SG6/t9w==
   celebahq__Arched_Eyebrows:
     name: celebahq__Arched_Eyebrows.obj
-    url: https://vault.cs.uwaterloo.ca/s/yjnxZ9Rgny5Cn7r
+    url: https://nextcloud.cs.uwaterloo.ca/s/tM66NGw5ma6mfR9
     size: 1200353
     checksum: !!binary |
       jvgUmche054IKkKBj3JNOA==
   celebahq__Black_Hair:
     name: celebahq__Black_Hair.obj
-    url: https://vault.cs.uwaterloo.ca/s/gBbfKj2ALqTkDTj
+    url: https://nextcloud.cs.uwaterloo.ca/s/gZGXrZpJpHwaee4
     size: 1200353
     checksum: !!binary |
       CCl/f8VsyUzjv4cZq+64Zg==
   celebahq__Blond_Hair:
     name: celebahq__Blond_Hair.obj
-    url: https://vault.cs.uwaterloo.ca/s/QiN2CN2NWHeK99K
+    url: https://nextcloud.cs.uwaterloo.ca/s/nLJoWkWFnj9eo4F
     size: 1200353
     checksum: !!binary |
       OvIpIvwgCnkHpqOU36NhjQ==
   celebahq__Bags_Under_Eyes:
     name: celebahq__Bags_Under_Eyes.obj
-    url: https://vault.cs.uwaterloo.ca/s/TiCd8ya6p88cMAE
+    url: 
     size: 1200353
     checksum: !!binary |
       ZF5UWCl54VN9zWxL9qDLAQ==
   celebahq__Gray_Hair:
     name: celebahq__Gray_Hair.obj
-    url: https://vault.cs.uwaterloo.ca/s/YC6NZGrxwCBaaqG
+    url: 
     size: 1200353
     checksum: !!binary |
       kyLddqgnzgeL9lGyOGNuNQ==
   celebahq__Male:
     name: celebahq__Male.obj
-    url: https://vault.cs.uwaterloo.ca/s/9HKkSiaHQXTwinb
+    url: 
     size: 1200353
     checksum: !!binary |
       Es9ESksde3WUiR8kbY7UhA==
   celebahq__Smiling:
     name: celebahq__Smiling.obj
-    url: https://vault.cs.uwaterloo.ca/s/qbr6Feb2d4nTJd7
+    url: 
     size: 1200353
     checksum: !!binary |
       gSNnMqzjQ0gdxHP78uhhMw==
   celebahq__5_o_Clock_Shadow:
     name: celebahq__5_o_Clock_Shadow.obj
-    url: https://vault.cs.uwaterloo.ca/s/wXi7ot5CnknR7GZ
+    url: 
     size: 1200353
     checksum: !!binary |
       sjMO1xHlVdk5HXfesQsLJg==
   celebahq__Bald:
     name: celebahq__Bald.obj
-    url: https://vault.cs.uwaterloo.ca/s/GpLGWtccSNAYAPd
+    url: 
     size: 1200353
     checksum: !!binary |
       /N5B0NVmQ7wiaTsXCljULQ==
   celebahq__Blurry:
     name: celebahq__Blurry.obj
-    url: https://vault.cs.uwaterloo.ca/s/nWHQBbppwdq3r7f
+    url: 
     size: 1200353
     checksum: !!binary |
       Xd4gKon1kyPbwwNGkHE/MQ==
   celebahq__Heavy_Makeup:
     name: celebahq__Heavy_Makeup.obj
-    url: https://vault.cs.uwaterloo.ca/s/cedD7NDxExkCCtQ
+    url: 
     size: 1200353
     checksum: !!binary |
       S+S7MgW+mbvhu8l8u82vHg==
   celebahq__Oval_Face:
     name: celebahq__Oval_Face.obj
-    url: https://vault.cs.uwaterloo.ca/s/pWoqogJg45AJLmR
+    url: 
     size: 1200353
     checksum: !!binary |
       fJNOdPtiwrjZMZyfk3rKLQ==
   celebahq__Double_Chin:
     name: celebahq__Double_Chin.obj
-    url: https://vault.cs.uwaterloo.ca/s/PtYeA9EDW2dS2px
+    url: 
     size: 1200353
     checksum: !!binary |
       W55a/vTfXI6OaQqazCRwxg==
   celebahq__No_Beard:
     name: celebahq__No_Beard.obj
-    url: https://vault.cs.uwaterloo.ca/s/EMrzXiYGxf5r3aL
+    url: 
     size: 1200353
     checksum: !!binary |
       cLgHkvn04HC2zHiyvLKI2Q==
   celebahq__Brown_Hair:
     name: celebahq__Brown_Hair.obj
-    url: https://vault.cs.uwaterloo.ca/s/t98c5ZPX3L3Mnga
+    url: 
     size: 1200353
     checksum: !!binary |
       i6SN7ufdHNre4mxEYc3Mog==
   celebahq__Mustache:
     name: celebahq__Mustache.obj
-    url: https://vault.cs.uwaterloo.ca/s/9ZHf97swzk4W49i
+    url: 
     size: 1200353
     checksum: !!binary |
       RxjZm/ApmLcgLMpyyceG2g==
   celebahq__Wearing_Necktie:
     name: celebahq__Wearing_Necktie.obj
-    url: https://vault.cs.uwaterloo.ca/s/pXZAbfrmQBaxDpe
+    url: 
     size: 1200353
     checksum: !!binary |
       zr5VRbuO4X269WBuzL7cbA==
