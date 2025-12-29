@@ -2,39 +2,39 @@ torch:
   cifar10:
     wrn-70-16-dropout:
       name: wrn-70-16-dropout.pt
-      url: https://vault.cs.uwaterloo.ca/s/9QEsGnPrXJ7KES9
+      url: https://nextcloud.cs.uwaterloo.ca/s/eFiwX75KMmi9SXZ
       size: 1067654334
       checksum: !!binary |
         i5V52aG964Ca7iKJmTsAqA==
     resnet50:
       name: resnet50.pt
-      url: https://vault.cs.uwaterloo.ca/s/TigYxcEXdG4H47P
+      url: https://nextcloud.cs.uwaterloo.ca/s/dCL5pNaqCDT8Cmt
       size: 94410799
       checksum: !!binary |
         rcw5JNlWj48gBWw7VLzR/w==
     wideresnet-70-16:
       name: wideresnet-70-16.pt
-      url: https://vault.cs.uwaterloo.ca/s/9iQp6DB7yBtXLLZ
+      url: https://nextcloud.cs.uwaterloo.ca/s/stx6or2q6kAZREZ
       size: 2134963836
       checksum: !!binary |
         JVcSz2SyceptY7Vkx9Tjlg==
   celebahq:
     name: celebahq.tar.gz
-    url: https://vault.cs.uwaterloo.ca/s/9CAaWaKK3cRRBrj
+    url: https://nextcloud.cs.uwaterloo.ca/s/rm7LSo7FjAAzy4G
     size: 3411210532
     checksum: d0ef944049621f904db88ea6ddeed16a
 tf:
   cifar10:
     vgg16:
       name: vgg16.h5
-      url: https://vault.cs.uwaterloo.ca/s/8p9yoka4snPm5Hr
+      url: https://nextcloud.cs.uwaterloo.ca/s/2LAWQARoNnoWBPr
       size: 60137632
       checksum: !!binary |
         QMZlfPHZ6Zh5kX/vttRSjg==
   youtube:
     resnet50np:
       name: resnet50np.h5
-      url: https://vault.cs.uwaterloo.ca/s/t8symEf7Tb6x6N7
+      url: https://nextcloud.cs.uwaterloo.ca/s/8iJeqZxymnX6cPj
       size: 105301196
       checksum: !!binary |
         NJ8PzM6wd3ckqQeCqCOFBA==
